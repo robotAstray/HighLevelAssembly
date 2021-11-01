@@ -1,6 +1,8 @@
+program instructions;
+
 #include("stdlib.hhf")
 
-static
+static 
         num1: int8      := -32;
         num2: int32     := -64;
         num3: int8      := 100;
@@ -11,23 +13,23 @@ begin instructions;
 
         stdout.put( nl, "Initialising variables: num1=", num1, ", num2=", num2, ", num3=", num3, nl );
 
-        //Subtract 23 from num1 using sub instrucions and print the result
+        //Subtract 23 from num1 using the sub instruction and print the result
 
         sub( 23, num1 );
         stdout.put( nl, "After subtracting 23 from num1 we obtain num1=", num1, nl );
 
-        //Subtracting 11 from num3 using sub instruction and print result
+        //Subtract 11 from num3 using sub instruction and print result
 
-        sub( 11, num3 );
-        stdout.put( nl, "After subtracting 11 from num3 we obtain num3=", num3, nl );
+        sub( 11, num3);
+        stdout.put( nl, "After subtracting 11 from num3  we obtain num3", num3, nl );
 
-        //Adding 34 to num2 using add instruction and print result
+        //Adding -34 to num2 using add instruction and print the result
 
-        add( 34, num2 );
-        stdout.put(nl, "After adding 34 to num2 we obtain num2=", num2, nl);
+        add( -34, num2);
+        stdout.put( nl, "After adding -34 to num2 we obtain num2=", num2, nl );
 
-        //Find the adsolute value of num2 by doing the following
-        //STEP 1: Copy 0 to an empty 32-bit register  (e.g. eax, ebx, ecx, edx, esi, edi, ebp, esp ) using mov instruction
+        //Find the absolute value of the updated num2
+        //STEP 1: Copy 0 to an empty 32-bit register (e.g. eax, ebx, ecx, esi. edi. ebp, esp) using mov instruction
         //STEP 2: Subtract num2 from the 32-bit register using the sub instruction
         //STEP 3: Copy the result of the subtraction to num2
         //STEP 4: Print the updated value of num2
@@ -36,7 +38,7 @@ begin instructions;
         sub( num2, eax );
         mov( eax, num2 );
         stdout.put( nl, "After computing the absolute value of num2, we obtain num2=", num2, nl );
-        stdout.put( nl, "Copyright (c) robotAstray", nl);
+        stdout.put( nl, "Copyright (c) robotAstray", nl );
 
 end instructions;
-
+                   
