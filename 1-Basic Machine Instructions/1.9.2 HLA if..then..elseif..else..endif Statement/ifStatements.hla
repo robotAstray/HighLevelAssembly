@@ -1,0 +1,17 @@
+program ifStatement;
+
+#include("stdlib.hhf")
+
+begin ifStatement;
+
+if(eax = 0) then
+
+	stdout.put("NULL Pointer!!", nl);
+
+else
+
+	stdout.put("VALID Pointer", nl);
+
+endif;
+
+end ifStatement;
